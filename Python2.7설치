@@ -1,0 +1,17 @@
+### centos6 위에 Python2.7 설치를 위한 mirrirlist 작성===========>
+echo "https://vault.centos.org/6.10/os/x86_64/" > /var/cache/yum/x86_64/6/base/mirrorlist.txt
+echo "http://vault.centos.org/6.10/extras/x86_64/" > /var/cache/yum/x86_64/6/extras/mirrorlist.txt
+echo "http://vault.centos.org/6.10/updates/x86_64/" > /var/cache/yum/x86_64/6/updates/mirrorlist.txt
+### 추가 설치가 필요한 경우(예. python Package psycopg2 설치 시)
+echo "http://vault.centos.org/6.10/sclo/x86_64/rh/" > /var/cache/yum/x86_64/6/centos-sclo-rh/mirrorlist.txt
+echo "http://vault.centos.org/6.10/sclo/x86_64/sclo/" > /var/cache/yum/x86_64/6/centos-sclo-sclo/mirrorlist.txt
+
+### Python2.7 설치과정
+$ yum install centos-release-scl
+$ yum install scl-utils
+$ yum install python27
+$ source /opt/rh/python27/enable
+### 설치 버전확인 $ python --version
+$ yum install python-pip
+$ yum install postgresql-devel
+$ bash -c "source /opt/rh/python27/enable; pip install psycopg2==2.6.2 --ignore-installed"
