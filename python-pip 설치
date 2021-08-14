@@ -1,0 +1,5 @@
+** centos7 파이썬 pip 설치 
+yum을 통해 python-pip 설치 -> Error: Noting to do 오류인 경우
+epel repository 설치 후 python-pip를 설치한다.
+$ yum install epel-release
+$ yum install python-pip
