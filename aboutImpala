@@ -7,3 +7,8 @@ Impala
   . Query Exec Engine
   . Statestored
   . Catalogd
+  
+Impala : 빠른 애드혹 분석을 수행할 때는 임팔라를 사용한다.
+        - 안정성이 높다.
+        - 실행 속도가 높다.
+Hive   : 대규모 데이터셋에서 긴 시간에 걸친 가공 및 추출작업에는 하이브를 사용한다.
