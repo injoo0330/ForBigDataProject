@@ -1,5 +1,6 @@
 # 추천 알고리즘
   - SIMILARITY_COOCCURRENCE
+  
 # 분류 모델 알고리즘
   - 나이브 베이지안
   - 랜덤 포레스트
